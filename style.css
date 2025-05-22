@@ -1,0 +1,202 @@
+/* style.css for Z&S Infratech - Light Theme */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+.hero {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1568605114967-8b0b0c1c1c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fG1ldHJvfGVufDB8fHx8fDE2MzI2OTI2NzM&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover; /* Relevant background image */
+  padding: 120px 20px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-title span {
+  color: #00d4ff;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #00d4ff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #00aacc;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about, .services, .gallery, .team, .contact {
+  background-color: #ffffff;
+  margin: 40px 0;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.gst-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #E0EE78; /* Change color as needed */
+  margin: 10px 0; /* Add some margin for spacing */
+}
